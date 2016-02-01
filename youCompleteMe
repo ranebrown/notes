@@ -1,0 +1,28 @@
+youCompleteMe
+
+# Installation
+   • add ycm plugin to .vimrc
+      ◦ Plugin ‘https://github.com/Valloric/YouCompleteMe.git’
+   • create tmp directory for build files
+      ◦ cd ~ && mkdir ycm_build && cd build
+   • install clang and cmake
+      ◦ sudo pacman -S clang cmake
+   • use cmake to build necessary ycm files
+      ◦ cmake -G “Unix Makefiles” -DUSE_SYSTEM_LIBCLANG=ON . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+      ◦ cmake —build . —target ycm_support_libs —config Release
+      ◦ make
+   • install tool to auto create .ycm_extra_conf.py files
+      ◦ from AUR 
+         ▸ git clone https://aur.archlinux.org/ycm-generator-git.git
+         ▸ cd ycm-generator-git
+         ▸ makepkg -sri
+
+# Setup
+   • create default .ycm_extra_conf.py file
+      ◦ place file in .vim/
+      ◦ edit .vimrc with following
+         ▸ let g:ycm_global_ycm_extra_conf = “~/.vim/.ycm_extra_conf.py”
+   • Use command ycm_generator <dir>
+      ◦ the <dir> should be the directory containing a project makefile
+      ◦ this will automatically create a project specific .ycm_extra_conf.py file
+      ◦ the .ycm_extra_conf.py file should be in the same directory as source files or one dir up
