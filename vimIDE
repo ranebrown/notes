@@ -1,0 +1,12 @@
+vimIDE
+
+#Options
+   • See .vimrc for necessary config options and packages
+   • files necessary for syntastic and ycm
+      ◦ .ycm_extra_conf.py
+         ▸ project specifc flags and directories
+         ▸ there is an auto create script that can be used
+      ◦ .syntastic_clang_check_config
+         ▸ used for custom include directories and other compiler flags
+         ▸ can use any name for file and set in .vimrc
+         ▸ file is searched for in dir of source files then recursively upwards
