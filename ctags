@@ -1,0 +1,12 @@
+ctags
+
+From: http://andrew.stwrt.ca/posts/vim-ctags/
+
+#Add tags file in current directory
+   • ctags -R .
+   • include function prototypes
+      ◦ ctags -R —c-kinds=+p
+
+#Add tags file in .git folder
+This will keep tags file hidden
+   • ctags -R -f ./.git/tags .
