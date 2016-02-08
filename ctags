@@ -4,8 +4,10 @@ From: http://andrew.stwrt.ca/posts/vim-ctags/
 
 #Add tags file in current directory
    • ctags -R .
-   • include function prototypes
-      ◦ ctags -R —c-kinds=+p
+   • include function prototypes from header files
+      ◦ ctags -R -—c-kinds=+p
+   • include language flag (needed for easytags)
+      ◦ ctags —fields=+l —c-kinds=+p -R
 
 #Add tags file in .git folder
 This will keep tags file hidden
