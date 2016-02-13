@@ -7,7 +7,7 @@ From: http://andrew.stwrt.ca/posts/vim-ctags/
    • include function prototypes from header files
       ◦ ctags -R -—c-kinds=+p
    • include language flag (needed for easytags)
-      ◦ ctags —fields=+l —c-kinds=+p -R
+      ◦ ctags -—fields=+l ——c-kinds=+p -R
 
 #Add tags file in .git folder
 This will keep tags file hidden
